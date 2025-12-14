@@ -48,9 +48,9 @@ app.get('*', (req, res) => {
 const io = socket(server, {
     cors: {
         origin: [
-            // "https://localhost",
-            // "https://192.168.29.188"
-            "*"
+            //  "https://localhost",
+            "https://10.136.84.119",
+            // "*"
         ],
         methods:["GET", "POST"]
     }

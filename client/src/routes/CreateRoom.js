@@ -27,9 +27,10 @@ const CreateRoom = () => {
         console.log("name: ", nameInContext);
         
             // setNameInContext(myEmail);
+            const baseUrl = process.env.REACT_APP_BASE_URL || 'http://10.136.84.119';
             const apiUrl = process.env.NODE_ENV === 'production'
-            ? '/get-rooms' // Relative URL in production
-            : `${process.env.REACT_APP_BASE_URL}:8181/get-rooms`;
+             ? '/get-rooms'
+             : `${baseUrl}:8181/get-rooms`;
 
             axios.post(apiUrl).then(({data}) => {                
                 console.log("hejd");
